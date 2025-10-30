@@ -1,0 +1,48 @@
+.form-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  gap: 10px;
+}
+
+.input-header {
+  width: 280px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: #2c2c3a;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.input-header::placeholder {
+  color: #aaa;
+}
+
+.input-header:focus {
+  background: #38384a;
+  box-shadow: 0 0 6px #646cff;
+}
+
+.btn-search {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #646cff;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-search:hover {
+  background: #5352ed;
+  transform: scale(1.05);
+}
+
+.btn-search:active {
+  transform: scale(0.95);
+}

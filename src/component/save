@@ -1,0 +1,29 @@
+import MovieCard from "./MovieCard";
+import movies from "../data/Movie";
+import "./MovieList.css";
+import { useState } from "react";
+
+function MovieList({ searchTerm }) {
+  const[select, setSelect]=useState(null);
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+  const clickhandler=() =>{
+  if(select===null){
+    setSelect('modal')
+  }
+
+  }
+
+  return (
+    <div onClick={clickhandler} className={`movie-list ${select}`}>
+      {filteredMovies.map((movie) => (
+        <MovieCard key={movie.id} {...movie}  />
+      ))}
+    </div>
+    
+  );
+}
+
+export default MovieList;
